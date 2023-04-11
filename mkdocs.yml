@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+site_name: AuD 2023 Wiki
+repo_name: AuD-2023/wiki
+repo_url: https://github.com/tudalgo/haudy
+theme:
+  name: material
+  favicon: assets/favicon.png
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.sections
+
+nav:
+  - Vorbereitung:
+    - Installieren von Java: preparation/installation-java.md
+    - Installieren von IntelliJ: preparation/installation-intellij.md
+    - Installieren von DrRacket: preparation/installation-racket.md
+    - Hinzufügen der Matrikelnummer: preparation/matriculation-number.md
+  - Hausübungen:
+    - Herunterladen und importieren: exercises/download-import.md
+    - Bearbeiten von Hausübungen: exercises/edit.md
+    - Beheben von häufigen Fehlern: exercises/fix-errors.md
+    - Exportieren und Hochladen: exercises/export-upload.md
+    - Nicht Unterstützte IDEs: exercises/download-import-unsupported.md
+    - Dokumentation von Java-Quellcode: exercises/documentation.md
+    - Beanstandungen: exercises/complaints.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - toc:
+      title: Auf dieser Seite
+
+extra_css:
+  - stylesheets/smooth-scroll.css
